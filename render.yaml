@@ -4,8 +4,7 @@ services:
     plan: free
     buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build
     staticPublishPath: ./dist
-    envVars:
-      - key: VITE_SUPABASE_URL
-        sync: false
-      - key: VITE_SUPABASE_ANON_KEY
-        sync: false
+
+# Optional for real shared storage:
+# After running supabase/migrations/001_plain_design_hub.sql in Supabase,
+# add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in the Render dashboard.
