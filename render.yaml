@@ -2,7 +2,6 @@ services:
   - type: web
     name: plain-design-hub
     runtime: static
-    plan: free
     buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build
     staticPublishPath: ./dist
 
