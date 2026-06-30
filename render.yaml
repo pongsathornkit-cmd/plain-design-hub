@@ -1,0 +1,11 @@
+services:
+  - type: static
+    name: plain-design-hub
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
